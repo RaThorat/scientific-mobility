@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_cf8194d0b34393020b774c409d1961a1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/marslan390/BeautifyMarker/leaflet-beautify-marker-icon.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marslan390/BeautifyMarker/leaflet-beautify-marker-icon.min.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_cf8194d0b34393020b774c409d1961a1" ></div>
+        
+    
+             <h3 align="center" style="font-size:16px"><b>Scientific mobility year xxxx</b></h3>
+             
+</body>
+<script>    
+    
+            var map_cf8194d0b34393020b774c409d1961a1 = L.map(
+                "map_cf8194d0b34393020b774c409d1961a1",
+                {
+                    center: [52.28140068888889, 5.535714111111112],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 2,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d1e58d787c07d1961e60d8b35d2995c1 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cf8194d0b34393020b774c409d1961a1);
+        
+    
+            var feature_group_1a21433d8f849badb1d9193322456ba8 = L.featureGroup(
+                {}
+            ).addTo(map_cf8194d0b34393020b774c409d1961a1);
+        
+    
+            var feature_group_92246f758f59bf00438ceee26ed8b42c = L.featureGroup(
+                {}
+            ).addTo(map_cf8194d0b34393020b774c409d1961a1);
+        
+    
+            var marker_cluster_dc8e1f80468cff95c5e34c1e0e62a11e = L.markerClusterGroup(
+                {}
+            );
+            feature_group_1a21433d8f849badb1d9193322456ba8.addLayer(marker_cluster_dc8e1f80468cff95c5e34c1e0e62a11e);
+        
+    
+            var marker_30f005be8bb8dd32e72c68230b4491f9 = L.marker(
+                [53.2192634, 6.562987199999999],
+                {}
+            ).addTo(marker_cluster_dc8e1f80468cff95c5e34c1e0e62a11e);
+        
+    
+            var beautify_icon_164020a3a5ee727204fda8362953eda5 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "blue", "borderWidth": 3, "innerIconStyle": "margin-top: 0px;", "isAlphaNumericIcon": true, "spin": false, "text": "1", "textColor": "blue"}
+            )
+            marker_30f005be8bb8dd32e72c68230b4491f9.setIcon(beautify_icon_164020a3a5ee727204fda8362953eda5);
+        
+    
+        var popup_744d619b314c0e4fdeb151bef1947446 = L.popup({"maxWidth": 600});
+
+        
+            var html_af61e97bceec1b593fd7e8d0a58c0600 = $(`<div id="html_af61e97bceec1b593fd7e8d0a58c0600" style="width: 100.0%; height: 100.0%;"><b>Title research :</b>gibberis<br> <b>Summary : </b>gibberish<br> <b>Researchtime : </b>24 months</div>`)[0];
+            popup_744d619b314c0e4fdeb151bef1947446.setContent(html_af61e97bceec1b593fd7e8d0a58c0600);
+        
+
+        marker_30f005be8bb8dd32e72c68230b4491f9.bindPopup(popup_744d619b314c0e4fdeb151bef1947446)
+        ;
+
+        
+    
+    
+            marker_30f005be8bb8dd32e72c68230b4491f9.bindTooltip(
+                `<div>
+                     A (V) from Zernike Institute for Advanced Materials, Rijksuniversiteit Groningen went 2018 to University of Oxford, Department of Chemistry. Click for research information.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2de0e01a4d0923af79bda3203a461cdf = L.marker(
+                [51.9845558, 5.6657696],
+                {}
+            ).addTo(marker_cluster_dc8e1f80468cff95c5e34c1e0e62a11e);
+        
+    
+            var beautify_icon_0eaba37fe8e54dc58ef53f55f2c08a45 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "blue", "borderWidth": 3, "innerIconStyle": "margin-top: 0px;", "isAlphaNumericIcon": true, "spin": false, "text": "1", "textColor": "blue"}
+            )
+            marker_2de0e01a4d0923af79bda3203a461cdf.setIcon(beautify_icon_0eaba37fe8e54dc58ef53f55f2c08a45);
+        
+    
+        var popup_46293207c673ca47a5906cf5d4ada4ee = L.popup({"maxWidth": 600});
+
+        
+            var html_deece981716ab341d1f832713e18eff8 = $(`<div id="html_deece981716ab341d1f832713e18eff8" style="width: 100.0%; height: 100.0%;"><b>Title research :</b>gibberis<br> <b>Summary : </b>gibberish<br> <b>Researchtime : </b>24 months</div>`)[0];
+            popup_46293207c673ca47a5906cf5d4ada4ee.setContent(html_deece981716ab341d1f832713e18eff8);
+        
+
+        marker_2de0e01a4d0923af79bda3203a461cdf.bindPopup(popup_46293207c673ca47a5906cf5d4ada4ee)
+        ;
+
+        
+    
+    
+            marker_2de0e01a4d0923af79bda3203a461cdf.bindTooltip(
+                `<div>
+                     B (V) from Wageningen Universiteit went 2018 to Yale University, School of Public Health. Click for research information.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cbfe9de7541b6a5bfd6fbe63792d4977 = L.marker(
+                [51.987523, 5.670789999999999],
+                {}
+            ).addTo(marker_cluster_dc8e1f80468cff95c5e34c1e0e62a11e);
+        
+    
+            var beautify_icon_44fd8d4f97bcbdc3a2f732d0fcdc54ee = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "blue", "borderWidth": 3, "innerIconStyle": "margin-top: 0px;", "isAlphaNumericIcon": true, "spin": false, "text": "1", "textColor": "blue"}
+            )
+            marker_cbfe9de7541b6a5bfd6fbe63792d4977.setIcon(beautify_icon_44fd8d4f97bcbdc3a2f732d0fcdc54ee);
+        
+    
+        var popup_ff7241f07de2da9356118d8e506a7323 = L.popup({"maxWidth": 600});
+
+        
+            var html_83aaeb36de4cbd2c3c4f1c700de24ad2 = $(`<div id="html_83aaeb36de4cbd2c3c4f1c700de24ad2" style="width: 100.0%; height: 100.0%;"><b>Title research :</b>gibberis<br> <b>Summary : </b>gibberish<br> <b>Researchtime : </b>24 months</div>`)[0];
+            popup_ff7241f07de2da9356118d8e506a7323.setContent(html_83aaeb36de4cbd2c3c4f1c700de24ad2);
+        
+
+        marker_cbfe9de7541b6a5bfd6fbe63792d4977.bindPopup(popup_ff7241f07de2da9356118d8e506a7323)
+        ;
+
+        
+    
+    
+            marker_cbfe9de7541b6a5bfd6fbe63792d4977.bindTooltip(
+                `<div>
+                     C (V) from Koninklijke Nederlandse Akademie van Wetenschappen, Nederlands Instituut voor Ecologie (NIOO),Dierecologie went 2018 to Museum of New Zealand Te Papa Tongarewa. Click for research information.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e72edf6c1d785685d4a963d66ab5f16d = L.marker(
+                [51.987523, 5.670789999999999],
+                {}
+            ).addTo(marker_cluster_dc8e1f80468cff95c5e34c1e0e62a11e);
+        
+    
+            var beautify_icon_addd45ad7bc84bd767df0048196d8658 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "blue", "borderWidth": 3, "innerIconStyle": "margin-top: 0px;", "isAlphaNumericIcon": true, "spin": false, "text": "1", "textColor": "blue"}
+            )
+            marker_e72edf6c1d785685d4a963d66ab5f16d.setIcon(beautify_icon_addd45ad7bc84bd767df0048196d8658);
+        
+    
+        var popup_9e9b2fa864545b60d1787c1c1f253fba = L.popup({"maxWidth": 600});
+
+        
+            var html_d5be70d9ae556aafd519cba967ed191f = $(`<div id="html_d5be70d9ae556aafd519cba967ed191f" style="width: 100.0%; height: 100.0%;"><b>Title research :</b>gibberis<br> <b>Summary : </b>gibberish<br> <b>Researchtime : </b>24 months</div>`)[0];
+            popup_9e9b2fa864545b60d1787c1c1f253fba.setContent(html_d5be70d9ae556aafd519cba967ed191f);
+        
+
+        marker_e72edf6c1d785685d4a963d66ab5f16d.bindPopup(popup_9e9b2fa864545b60d1787c1c1f253fba)
+        ;
+
+        
+    
+    
+            marker_e72edf6c1d785685d4a963d66ab5f16d.bindTooltip(
+                `<div>
+                     D (M) from NIOO-KNAW/Wageningen Universiteit went 2018 to ETH Zürich. Click for research information.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6e55f99b9abdd5a214ed9c0ae71ea449 = L.marker(
+                [51.9962928, 4.375942],
+                {}
+            ).addTo(marker_cluster_dc8e1f80468cff95c5e34c1e0e62a11e);
+        
+    
+            var beautify_icon_211d85d32c170b0c44d0fe84a492b67d = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "blue", "borderWidth": 3, "innerIconStyle": "margin-top: 0px;", "isAlphaNumericIcon": true, "spin": false, "text": "1", "textColor": "blue"}
+            )
+            marker_6e55f99b9abdd5a214ed9c0ae71ea449.setIcon(beautify_icon_211d85d32c170b0c44d0fe84a492b67d);
+        
+    
+        var popup_5ee09acb2a5336c9622a390aabc42705 = L.popup({"maxWidth": 600});
+
+        
+            var html_43441a39a986ef04dcc7c62f6784a677 = $(`<div id="html_43441a39a986ef04dcc7c62f6784a677" style="width: 100.0%; height: 100.0%;"><b>Title research :</b>gibberis<br> <b>Summary : </b>gibberish<br> <b>Researchtime : </b>24 months</div>`)[0];
+            popup_5ee09acb2a5336c9622a390aabc42705.setContent(html_43441a39a986ef04dcc7c62f6784a677);
+        
+
+        marker_6e55f99b9abdd5a214ed9c0ae71ea449.bindPopup(popup_5ee09acb2a5336c9622a390aabc42705)
+        ;
+
+        
+    
+    
+            marker_6e55f99b9abdd5a214ed9c0ae71ea449.bindTooltip(
+                `<div>
+                     E (V) from Technische Universiteit Delft went 2018 to Princeton University, Department of Chemical and Biological Engineering. Click for research information.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_090ecb89317cd94d7fa1f666b9dad6b9 = L.marker(
+                [53.2192634, 6.562987199999999],
+                {}
+            ).addTo(marker_cluster_dc8e1f80468cff95c5e34c1e0e62a11e);
+        
+    
+            var beautify_icon_c2b3305f38ff16b56083d1763f4452e8 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "blue", "borderWidth": 3, "innerIconStyle": "margin-top: 0px;", "isAlphaNumericIcon": true, "spin": false, "text": "1", "textColor": "blue"}
+            )
+            marker_090ecb89317cd94d7fa1f666b9dad6b9.setIcon(beautify_icon_c2b3305f38ff16b56083d1763f4452e8);
+        
+    
+        var popup_47b7360c9be1a8e845cc0381f231aae5 = L.popup({"maxWidth": 600});
+
+        
+            var html_b3890e04a2a03ce2e53954570f7f2f06 = $(`<div id="html_b3890e04a2a03ce2e53954570f7f2f06" style="width: 100.0%; height: 100.0%;"><b>Title research :</b>gibberis<br> <b>Summary : </b>gibberish<br> <b>Researchtime : </b>24 months</div>`)[0];
+            popup_47b7360c9be1a8e845cc0381f231aae5.setContent(html_b3890e04a2a03ce2e53954570f7f2f06);
+        
+
+        marker_090ecb89317cd94d7fa1f666b9dad6b9.bindPopup(popup_47b7360c9be1a8e845cc0381f231aae5)
+        ;
+
+        
+    
+    
+            marker_090ecb89317cd94d7fa1f666b9dad6b9.bindTooltip(
+                `<div>
+                     F (M) from Rijksuniversiteit Groningen went 2018 to Yale University. Click for research information.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e5255c7e4a0b6ffb5ad218d0eac3d0d7 = L.marker(
+                [52.35581819999999, 4.955726299999999],
+                {}
+            ).addTo(marker_cluster_dc8e1f80468cff95c5e34c1e0e62a11e);
+        
+    
+            var beautify_icon_cd9f18983c97134d0160f439e6dc671a = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "blue", "borderWidth": 3, "innerIconStyle": "margin-top: 0px;", "isAlphaNumericIcon": true, "spin": false, "text": "1", "textColor": "blue"}
+            )
+            marker_e5255c7e4a0b6ffb5ad218d0eac3d0d7.setIcon(beautify_icon_cd9f18983c97134d0160f439e6dc671a);
+        
+    
+        var popup_b657d962285dc1a5d91d45f334c892b1 = L.popup({"maxWidth": 600});
+
+        
+            var html_c068c8a2e053b1121a5fb349c9c9eb65 = $(`<div id="html_c068c8a2e053b1121a5fb349c9c9eb65" style="width: 100.0%; height: 100.0%;"><b>Title research :</b>gibberis<br> <b>Summary : </b>gibberish<br> <b>Researchtime : </b>24 months</div>`)[0];
+            popup_b657d962285dc1a5d91d45f334c892b1.setContent(html_c068c8a2e053b1121a5fb349c9c9eb65);
+        
+
+        marker_e5255c7e4a0b6ffb5ad218d0eac3d0d7.bindPopup(popup_b657d962285dc1a5d91d45f334c892b1)
+        ;
+
+        
+    
+    
+            marker_e5255c7e4a0b6ffb5ad218d0eac3d0d7.bindTooltip(
+                `<div>
+                     G (V) from Universiteit van Amsterdam went 2018 to Massachusetts Institute of Technology  . Click for research information.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_281e0c0ff5a2a690f7bc6a5f95ee6e19 = L.marker(
+                [52.3337568, 4.8657199],
+                {}
+            ).addTo(marker_cluster_dc8e1f80468cff95c5e34c1e0e62a11e);
+        
+    
+            var beautify_icon_80cdf65bb3d0edc706d85c3d802a5205 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "blue", "borderWidth": 3, "innerIconStyle": "margin-top: 0px;", "isAlphaNumericIcon": true, "spin": false, "text": "1", "textColor": "blue"}
+            )
+            marker_281e0c0ff5a2a690f7bc6a5f95ee6e19.setIcon(beautify_icon_80cdf65bb3d0edc706d85c3d802a5205);
+        
+    
+        var popup_a1c6f5dd26d2510da1376dbfd170cf28 = L.popup({"maxWidth": 600});
+
+        
+            var html_781109fb437e2b3b6ebb68e697c571a5 = $(`<div id="html_781109fb437e2b3b6ebb68e697c571a5" style="width: 100.0%; height: 100.0%;"><b>Title research :</b>gibberis<br> <b>Summary : </b>gibberish<br> <b>Researchtime : </b>24 months</div>`)[0];
+            popup_a1c6f5dd26d2510da1376dbfd170cf28.setContent(html_781109fb437e2b3b6ebb68e697c571a5);
+        
+
+        marker_281e0c0ff5a2a690f7bc6a5f95ee6e19.bindPopup(popup_a1c6f5dd26d2510da1376dbfd170cf28)
+        ;
+
+        
+    
+    
+            marker_281e0c0ff5a2a690f7bc6a5f95ee6e19.bindTooltip(
+                `<div>
+                     H (M) from Vrije Universiteit Amsterdam went 2018 to University of California Irvine, Department of Chemistry. Click for research information.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2f2754c014c5f2127dbd44684c0d8e1f = L.marker(
+                [51.44860980000001, 5.4907148],
+                {}
+            ).addTo(marker_cluster_dc8e1f80468cff95c5e34c1e0e62a11e);
+        
+    
+            var beautify_icon_f11df8ee9a7d9152ad7f5ccae9ff788b = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "blue", "borderWidth": 3, "innerIconStyle": "margin-top: 0px;", "isAlphaNumericIcon": true, "spin": false, "text": "1", "textColor": "blue"}
+            )
+            marker_2f2754c014c5f2127dbd44684c0d8e1f.setIcon(beautify_icon_f11df8ee9a7d9152ad7f5ccae9ff788b);
+        
+    
+        var popup_5bd8b055c5a75db7f1ebac3a9873609f = L.popup({"maxWidth": 600});
+
+        
+            var html_7de198078936ca74e47e1dc7d84004d3 = $(`<div id="html_7de198078936ca74e47e1dc7d84004d3" style="width: 100.0%; height: 100.0%;"><b>Title research :</b>gibberis<br> <b>Summary : </b>gibberish<br> <b>Researchtime : </b>24 months</div>`)[0];
+            popup_5bd8b055c5a75db7f1ebac3a9873609f.setContent(html_7de198078936ca74e47e1dc7d84004d3);
+        
+
+        marker_2f2754c014c5f2127dbd44684c0d8e1f.bindPopup(popup_5bd8b055c5a75db7f1ebac3a9873609f)
+        ;
+
+        
+    
+    
+            marker_2f2754c014c5f2127dbd44684c0d8e1f.bindTooltip(
+                `<div>
+                     I (V) from Technische Universiteit Eindhoven went 2018 to Universiteit Gent. Click for research information.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cluster_fb62152347a9d88d335bab3837340569 = L.markerClusterGroup(
+                {}
+            );
+            feature_group_92246f758f59bf00438ceee26ed8b42c.addLayer(marker_cluster_fb62152347a9d88d335bab3837340569);
+        
+    
+            var marker_be3114cd3bbfdb11b959134f2a0fae9a = L.marker(
+                [51.7579477, -1.2528014],
+                {}
+            ).addTo(marker_cluster_fb62152347a9d88d335bab3837340569);
+        
+    
+            var beautify_icon_09f9702dc86177e8af60ae4eabf07f7a = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "red", "borderWidth": 3, "innerIconStyle": "margin-top: 0px;", "isAlphaNumericIcon": true, "spin": false, "text": "1", "textColor": "red"}
+            )
+            marker_be3114cd3bbfdb11b959134f2a0fae9a.setIcon(beautify_icon_09f9702dc86177e8af60ae4eabf07f7a);
+        
+    
+        var popup_3e84779b0ccb4b598cf7a72673a0536b = L.popup({"maxWidth": 600});
+
+        
+            var html_2846ad0807e117bc42d1220544431253 = $(`<div id="html_2846ad0807e117bc42d1220544431253" style="width: 100.0%; height: 100.0%;"><b>Title research :</b>gibberis<br> <b>Summary : </b>gibberish<br> <b>Researchtime : </b>24 months</div>`)[0];
+            popup_3e84779b0ccb4b598cf7a72673a0536b.setContent(html_2846ad0807e117bc42d1220544431253);
+        
+
+        marker_be3114cd3bbfdb11b959134f2a0fae9a.bindPopup(popup_3e84779b0ccb4b598cf7a72673a0536b)
+        ;
+
+        
+    
+    
+            marker_be3114cd3bbfdb11b959134f2a0fae9a.bindTooltip(
+                `<div>
+                     A (V) from Zernike Institute for Advanced Materials, Rijksuniversiteit Groningen came 2018 to University of Oxford, Department of Chemistry. Click for research information.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4869ca043cc27f387252c5abed8329f8 = L.marker(
+                [41.3037199, -72.932118],
+                {}
+            ).addTo(marker_cluster_fb62152347a9d88d335bab3837340569);
+        
+    
+            var beautify_icon_06e51fddf7f40ee9de26887dae7c77c3 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "red", "borderWidth": 3, "innerIconStyle": "margin-top: 0px;", "isAlphaNumericIcon": true, "spin": false, "text": "1", "textColor": "red"}
+            )
+            marker_4869ca043cc27f387252c5abed8329f8.setIcon(beautify_icon_06e51fddf7f40ee9de26887dae7c77c3);
+        
+    
+        var popup_e42460e687def4e120b225bd6ca0bd86 = L.popup({"maxWidth": 600});
+
+        
+            var html_bf0bacdf7cff0c581baef32e470bb280 = $(`<div id="html_bf0bacdf7cff0c581baef32e470bb280" style="width: 100.0%; height: 100.0%;"><b>Title research :</b>gibberis<br> <b>Summary : </b>gibberish<br> <b>Researchtime : </b>24 months</div>`)[0];
+            popup_e42460e687def4e120b225bd6ca0bd86.setContent(html_bf0bacdf7cff0c581baef32e470bb280);
+        
+
+        marker_4869ca043cc27f387252c5abed8329f8.bindPopup(popup_e42460e687def4e120b225bd6ca0bd86)
+        ;
+
+        
+    
+    
+            marker_4869ca043cc27f387252c5abed8329f8.bindTooltip(
+                `<div>
+                     B (V) from Wageningen Universiteit came 2018 to Yale University, School of Public Health. Click for research information.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e0566498b10b8f00eba6fd6cf57cd75e = L.marker(
+                [-41.2904563, 174.7820894],
+                {}
+            ).addTo(marker_cluster_fb62152347a9d88d335bab3837340569);
+        
+    
+            var beautify_icon_3626b578bd2baaed4c1c10a97dfbe26d = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "red", "borderWidth": 3, "innerIconStyle": "margin-top: 0px;", "isAlphaNumericIcon": true, "spin": false, "text": "1", "textColor": "red"}
+            )
+            marker_e0566498b10b8f00eba6fd6cf57cd75e.setIcon(beautify_icon_3626b578bd2baaed4c1c10a97dfbe26d);
+        
+    
+        var popup_674c52a3ca1d05548cc84d4e224fed56 = L.popup({"maxWidth": 600});
+
+        
+            var html_99f8f3069ed4c4c9fb05d25143f257d1 = $(`<div id="html_99f8f3069ed4c4c9fb05d25143f257d1" style="width: 100.0%; height: 100.0%;"><b>Title research :</b>gibberis<br> <b>Summary : </b>gibberish<br> <b>Researchtime : </b>24 months</div>`)[0];
+            popup_674c52a3ca1d05548cc84d4e224fed56.setContent(html_99f8f3069ed4c4c9fb05d25143f257d1);
+        
+
+        marker_e0566498b10b8f00eba6fd6cf57cd75e.bindPopup(popup_674c52a3ca1d05548cc84d4e224fed56)
+        ;
+
+        
+    
+    
+            marker_e0566498b10b8f00eba6fd6cf57cd75e.bindTooltip(
+                `<div>
+                     C (V) from Koninklijke Nederlandse Akademie van Wetenschappen, Nederlands Instituut voor Ecologie (NIOO),Dierecologie came 2018 to Museum of New Zealand Te Papa Tongarewa. Click for research information.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f92f9e9b3a80df30db4be083b3aa4470 = L.marker(
+                [47.376313, 8.547669899999999],
+                {}
+            ).addTo(marker_cluster_fb62152347a9d88d335bab3837340569);
+        
+    
+            var beautify_icon_16816117e42eee0017710e74afd98a32 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "red", "borderWidth": 3, "innerIconStyle": "margin-top: 0px;", "isAlphaNumericIcon": true, "spin": false, "text": "1", "textColor": "red"}
+            )
+            marker_f92f9e9b3a80df30db4be083b3aa4470.setIcon(beautify_icon_16816117e42eee0017710e74afd98a32);
+        
+    
+        var popup_b1497cc9eb44184242eefee97e3bcda9 = L.popup({"maxWidth": 600});
+
+        
+            var html_3bb9f1990024b4875adc179c8ed11aa9 = $(`<div id="html_3bb9f1990024b4875adc179c8ed11aa9" style="width: 100.0%; height: 100.0%;"><b>Title research :</b>gibberis<br> <b>Summary : </b>gibberish<br> <b>Researchtime : </b>24 months</div>`)[0];
+            popup_b1497cc9eb44184242eefee97e3bcda9.setContent(html_3bb9f1990024b4875adc179c8ed11aa9);
+        
+
+        marker_f92f9e9b3a80df30db4be083b3aa4470.bindPopup(popup_b1497cc9eb44184242eefee97e3bcda9)
+        ;
+
+        
+    
+    
+            marker_f92f9e9b3a80df30db4be083b3aa4470.bindTooltip(
+                `<div>
+                     D (M) from NIOO-KNAW/Wageningen Universiteit came 2018 to ETH Zürich. Click for research information.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3496c269a87d7c523601edb1e2982db5 = L.marker(
+                [40.350394, -74.650645],
+                {}
+            ).addTo(marker_cluster_fb62152347a9d88d335bab3837340569);
+        
+    
+            var beautify_icon_f10655f085bda4b577e6e8ecb90febe4 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "red", "borderWidth": 3, "innerIconStyle": "margin-top: 0px;", "isAlphaNumericIcon": true, "spin": false, "text": "1", "textColor": "red"}
+            )
+            marker_3496c269a87d7c523601edb1e2982db5.setIcon(beautify_icon_f10655f085bda4b577e6e8ecb90febe4);
+        
+    
+        var popup_c1f2270a369a664b473c71e25a9c9b7c = L.popup({"maxWidth": 600});
+
+        
+            var html_66eb702946db32dff5cb6583b02cc581 = $(`<div id="html_66eb702946db32dff5cb6583b02cc581" style="width: 100.0%; height: 100.0%;"><b>Title research :</b>gibberis<br> <b>Summary : </b>gibberish<br> <b>Researchtime : </b>24 months</div>`)[0];
+            popup_c1f2270a369a664b473c71e25a9c9b7c.setContent(html_66eb702946db32dff5cb6583b02cc581);
+        
+
+        marker_3496c269a87d7c523601edb1e2982db5.bindPopup(popup_c1f2270a369a664b473c71e25a9c9b7c)
+        ;
+
+        
+    
+    
+            marker_3496c269a87d7c523601edb1e2982db5.bindTooltip(
+                `<div>
+                     E (V) from Technische Universiteit Delft came 2018 to Princeton University, Department of Chemical and Biological Engineering. Click for research information.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0fd92e431405286e6406588e6fd90d90 = L.marker(
+                [41.3163244, -72.92234309999999],
+                {}
+            ).addTo(marker_cluster_fb62152347a9d88d335bab3837340569);
+        
+    
+            var beautify_icon_836303ad19c369362c72e1f1444e0c08 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "red", "borderWidth": 3, "innerIconStyle": "margin-top: 0px;", "isAlphaNumericIcon": true, "spin": false, "text": "1", "textColor": "red"}
+            )
+            marker_0fd92e431405286e6406588e6fd90d90.setIcon(beautify_icon_836303ad19c369362c72e1f1444e0c08);
+        
+    
+        var popup_d06e046f0a40f3e9873791bb665d5358 = L.popup({"maxWidth": 600});
+
+        
+            var html_7f4b830d0a3c269a9b9423980e468a49 = $(`<div id="html_7f4b830d0a3c269a9b9423980e468a49" style="width: 100.0%; height: 100.0%;"><b>Title research :</b>gibberis<br> <b>Summary : </b>gibberish<br> <b>Researchtime : </b>24 months</div>`)[0];
+            popup_d06e046f0a40f3e9873791bb665d5358.setContent(html_7f4b830d0a3c269a9b9423980e468a49);
+        
+
+        marker_0fd92e431405286e6406588e6fd90d90.bindPopup(popup_d06e046f0a40f3e9873791bb665d5358)
+        ;
+
+        
+    
+    
+            marker_0fd92e431405286e6406588e6fd90d90.bindTooltip(
+                `<div>
+                     F (M) from Rijksuniversiteit Groningen came 2018 to Yale University. Click for research information.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d7b8c91232897dddbd4a98b4efe4b5e7 = L.marker(
+                [42.360091, -71.09416],
+                {}
+            ).addTo(marker_cluster_fb62152347a9d88d335bab3837340569);
+        
+    
+            var beautify_icon_cc35fc2d59c0f217d41935cd0068831c = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "red", "borderWidth": 3, "innerIconStyle": "margin-top: 0px;", "isAlphaNumericIcon": true, "spin": false, "text": "1", "textColor": "red"}
+            )
+            marker_d7b8c91232897dddbd4a98b4efe4b5e7.setIcon(beautify_icon_cc35fc2d59c0f217d41935cd0068831c);
+        
+    
+        var popup_541fe00e12fcf29b4f589ff79791746f = L.popup({"maxWidth": 600});
+
+        
+            var html_5739e925b95c0c9e1eb44bd7ebfe3f26 = $(`<div id="html_5739e925b95c0c9e1eb44bd7ebfe3f26" style="width: 100.0%; height: 100.0%;"><b>Title research :</b>gibberis<br> <b>Summary : </b>gibberish<br> <b>Researchtime : </b>24 months</div>`)[0];
+            popup_541fe00e12fcf29b4f589ff79791746f.setContent(html_5739e925b95c0c9e1eb44bd7ebfe3f26);
+        
+
+        marker_d7b8c91232897dddbd4a98b4efe4b5e7.bindPopup(popup_541fe00e12fcf29b4f589ff79791746f)
+        ;
+
+        
+    
+    
+            marker_d7b8c91232897dddbd4a98b4efe4b5e7.bindTooltip(
+                `<div>
+                     G (V) from Universiteit van Amsterdam came 2018 to Massachusetts Institute of Technology  . Click for research information.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a2a35e81aa52773f6db0b7e2bc63b04a = L.marker(
+                [33.6440954, -117.8452831],
+                {}
+            ).addTo(marker_cluster_fb62152347a9d88d335bab3837340569);
+        
+    
+            var beautify_icon_479b7e38b72891698edb1824474e6fd9 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "red", "borderWidth": 3, "innerIconStyle": "margin-top: 0px;", "isAlphaNumericIcon": true, "spin": false, "text": "1", "textColor": "red"}
+            )
+            marker_a2a35e81aa52773f6db0b7e2bc63b04a.setIcon(beautify_icon_479b7e38b72891698edb1824474e6fd9);
+        
+    
+        var popup_5c06a898f854f36f289142de1f9b41fd = L.popup({"maxWidth": 600});
+
+        
+            var html_cda6f5f4699ac4b05decc4a0a684a6d2 = $(`<div id="html_cda6f5f4699ac4b05decc4a0a684a6d2" style="width: 100.0%; height: 100.0%;"><b>Title research :</b>gibberis<br> <b>Summary : </b>gibberish<br> <b>Researchtime : </b>24 months</div>`)[0];
+            popup_5c06a898f854f36f289142de1f9b41fd.setContent(html_cda6f5f4699ac4b05decc4a0a684a6d2);
+        
+
+        marker_a2a35e81aa52773f6db0b7e2bc63b04a.bindPopup(popup_5c06a898f854f36f289142de1f9b41fd)
+        ;
+
+        
+    
+    
+            marker_a2a35e81aa52773f6db0b7e2bc63b04a.bindTooltip(
+                `<div>
+                     H (M) from Vrije Universiteit Amsterdam came 2018 to University of California Irvine, Department of Chemistry. Click for research information.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6dee054654961431e2669a88e62d55dc = L.marker(
+                [51.0521417, 3.7234608],
+                {}
+            ).addTo(marker_cluster_fb62152347a9d88d335bab3837340569);
+        
+    
+            var beautify_icon_3758d0cd997fa0a875edaef9864430c2 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "red", "borderWidth": 3, "innerIconStyle": "margin-top: 0px;", "isAlphaNumericIcon": true, "spin": false, "text": "1", "textColor": "red"}
+            )
+            marker_6dee054654961431e2669a88e62d55dc.setIcon(beautify_icon_3758d0cd997fa0a875edaef9864430c2);
+        
+    
+        var popup_594b345afc6bcd2947591b31dfbb2062 = L.popup({"maxWidth": 600});
+
+        
+            var html_0c7d7dc01c7d66f9ca2f46b9f562a534 = $(`<div id="html_0c7d7dc01c7d66f9ca2f46b9f562a534" style="width: 100.0%; height: 100.0%;"><b>Title research :</b>gibberis<br> <b>Summary : </b>gibberish<br> <b>Researchtime : </b>24 months</div>`)[0];
+            popup_594b345afc6bcd2947591b31dfbb2062.setContent(html_0c7d7dc01c7d66f9ca2f46b9f562a534);
+        
+
+        marker_6dee054654961431e2669a88e62d55dc.bindPopup(popup_594b345afc6bcd2947591b31dfbb2062)
+        ;
+
+        
+    
+    
+            marker_6dee054654961431e2669a88e62d55dc.bindTooltip(
+                `<div>
+                     I (V) from Technische Universiteit Eindhoven came 2018 to Universiteit Gent. Click for research information.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var layer_control_03f258e9b6bb7a4cfe55fec837834e70 = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_d1e58d787c07d1961e60d8b35d2995c1,
+                },
+                overlays :  {
+                    "Host universities cluster" : feature_group_1a21433d8f849badb1d9193322456ba8,
+                    "Guest universities cluster" : feature_group_92246f758f59bf00438ceee26ed8b42c,
+                },
+            };
+            L.control.layers(
+                layer_control_03f258e9b6bb7a4cfe55fec837834e70.base_layers,
+                layer_control_03f258e9b6bb7a4cfe55fec837834e70.overlays,
+                {"autoZIndex": false, "collapsed": false, "position": "topright"}
+            ).addTo(map_cf8194d0b34393020b774c409d1961a1);
+            feature_group_1a21433d8f849badb1d9193322456ba8.remove();
+        
+    
+            var poly_line_f6c76103c8b2ffe2b98f6d0bc306c8cd = L.polyline(
+                [[53.2192634, 6.562987199999999], [51.7579477, -1.2528014]],
+                {"bubblingMouseEvents": true, "color": "#008B9F", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#008B9F", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.25, "smoothFactor": 1.0, "stroke": true, "weight": 1.0}
+            ).addTo(map_cf8194d0b34393020b774c409d1961a1);
+        
+    
+            poly_line_f6c76103c8b2ffe2b98f6d0bc306c8cd.bindTooltip(
+                `<div>
+                     Zernike Institute for Advanced Materials, Rijksuniversiteit Groningen -> University of Oxford, Department of Chemistry
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_18c90c1657a033228673c4a719923574 = L.polyline(
+                [[51.9845558, 5.6657696], [41.3037199, -72.932118]],
+                {"bubblingMouseEvents": true, "color": "#008B9F", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#008B9F", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.25, "smoothFactor": 1.0, "stroke": true, "weight": 1.0}
+            ).addTo(map_cf8194d0b34393020b774c409d1961a1);
+        
+    
+            poly_line_18c90c1657a033228673c4a719923574.bindTooltip(
+                `<div>
+                     Wageningen Universiteit -> Yale University, School of Public Health
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_c1e8df439b33cdeef406aa5b351cd903 = L.polyline(
+                [[51.987523, 5.670789999999999], [-41.2904563, 174.7820894]],
+                {"bubblingMouseEvents": true, "color": "#008B9F", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#008B9F", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.25, "smoothFactor": 1.0, "stroke": true, "weight": 1.0}
+            ).addTo(map_cf8194d0b34393020b774c409d1961a1);
+        
+    
+            poly_line_c1e8df439b33cdeef406aa5b351cd903.bindTooltip(
+                `<div>
+                     Koninklijke Nederlandse Akademie van Wetenschappen, Nederlands Instituut voor Ecologie (NIOO),Dierecologie -> Museum of New Zealand Te Papa Tongarewa
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_380247998e9d33cd744439f6c2712a4a = L.polyline(
+                [[51.987523, 5.670789999999999], [47.376313, 8.547669899999999]],
+                {"bubblingMouseEvents": true, "color": "#008B9F", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#008B9F", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.25, "smoothFactor": 1.0, "stroke": true, "weight": 1.0}
+            ).addTo(map_cf8194d0b34393020b774c409d1961a1);
+        
+    
+            poly_line_380247998e9d33cd744439f6c2712a4a.bindTooltip(
+                `<div>
+                     NIOO-KNAW/Wageningen Universiteit -> ETH Zürich
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_0353f5ed56ff28b2a8ae6d8b9878083a = L.polyline(
+                [[51.9962928, 4.375942], [40.350394, -74.650645]],
+                {"bubblingMouseEvents": true, "color": "#008B9F", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#008B9F", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.25, "smoothFactor": 1.0, "stroke": true, "weight": 1.0}
+            ).addTo(map_cf8194d0b34393020b774c409d1961a1);
+        
+    
+            poly_line_0353f5ed56ff28b2a8ae6d8b9878083a.bindTooltip(
+                `<div>
+                     Technische Universiteit Delft -> Princeton University, Department of Chemical and Biological Engineering
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_42d3a07bf9ad0292401d79b96b6e5231 = L.polyline(
+                [[53.2192634, 6.562987199999999], [41.3163244, -72.92234309999999]],
+                {"bubblingMouseEvents": true, "color": "#008B9F", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#008B9F", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.25, "smoothFactor": 1.0, "stroke": true, "weight": 1.0}
+            ).addTo(map_cf8194d0b34393020b774c409d1961a1);
+        
+    
+            poly_line_42d3a07bf9ad0292401d79b96b6e5231.bindTooltip(
+                `<div>
+                     Rijksuniversiteit Groningen -> Yale University
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_56c8fcc656d1495748ca3aa95b428fe5 = L.polyline(
+                [[52.35581819999999, 4.955726299999999], [42.360091, -71.09416]],
+                {"bubblingMouseEvents": true, "color": "#008B9F", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#008B9F", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.25, "smoothFactor": 1.0, "stroke": true, "weight": 1.0}
+            ).addTo(map_cf8194d0b34393020b774c409d1961a1);
+        
+    
+            poly_line_56c8fcc656d1495748ca3aa95b428fe5.bindTooltip(
+                `<div>
+                     Universiteit van Amsterdam -> Massachusetts Institute of Technology  
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_460fefac6fb26fa702c8e1e3bfa85868 = L.polyline(
+                [[52.3337568, 4.8657199], [33.6440954, -117.8452831]],
+                {"bubblingMouseEvents": true, "color": "#008B9F", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#008B9F", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.25, "smoothFactor": 1.0, "stroke": true, "weight": 1.0}
+            ).addTo(map_cf8194d0b34393020b774c409d1961a1);
+        
+    
+            poly_line_460fefac6fb26fa702c8e1e3bfa85868.bindTooltip(
+                `<div>
+                     Vrije Universiteit Amsterdam -> University of California Irvine, Department of Chemistry
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_5e37a0de79e3db92f5df40f39aec0523 = L.polyline(
+                [[51.44860980000001, 5.4907148], [51.0521417, 3.7234608]],
+                {"bubblingMouseEvents": true, "color": "#008B9F", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#008B9F", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.25, "smoothFactor": 1.0, "stroke": true, "weight": 1.0}
+            ).addTo(map_cf8194d0b34393020b774c409d1961a1);
+        
+    
+            poly_line_5e37a0de79e3db92f5df40f39aec0523.bindTooltip(
+                `<div>
+                     Technische Universiteit Eindhoven -> Universiteit Gent
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
