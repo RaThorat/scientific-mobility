@@ -21,7 +21,7 @@ Importing various modules required for analysis
   
   tkinter
 
-Importing the scientific mobility example folium import file with Tkinter module. You need to close the window after importing the file provided in the github repository.
+Importing the scientific mobility example 'folium import file' with Tkinter module. You need to close the window after importing the file provided in the github repository.
 
 Converting the datatypes to allow it to proces in folium
 
