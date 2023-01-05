@@ -12,6 +12,7 @@ The data from csv output files of host and guest institute are bundled with info
 
 # Script
 Importing various modules required for analysis
+
   pandas
   folium
   os
