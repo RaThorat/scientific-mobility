@@ -14,8 +14,11 @@ The data from csv output files of host and guest institute are bundled with info
 Importing various modules required for analysis
 
   pandas
+  
   folium
+  
   os
+  
   tkinter
 
 Importing the scientific mobility example folium import file with Tkinter module. You need to close the window after importing the file provided in the github repository.
