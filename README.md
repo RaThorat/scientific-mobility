@@ -33,3 +33,17 @@ generating a map
 
 adding layers to map, default 'off' for cluster host universities
 
+adding marker clusters to respective layers
+
+adding markers to marker cluster for each source university
+
+adding markers to marker cluster for each destination university
+
+adding lines going from host institute to guest institutes
+
+adding title to the map
+
+saving the map in the folder where your current jupyter notebook is.
+
+## User manual html file
+You can view the number of scientists per region and per zoom level. The markers are colored based on quantity: more than 10 is color red yellow, 2 to 10 is color green. If you hover over the color red yellow markers, you can see the range. There are two layers of information: Host and guest institute info with the guest institute info default on. Zooming in further shows the numbers of scientists per region. Zooming in even further gives number of scientists per university. The last zoom lists each scientist by address with number 1 in the circle. If you hover over a circle, you get information about the scientist. You can see the specific research information when you click on it. The guest addresses are in red color and the host addresses are in blue color.
