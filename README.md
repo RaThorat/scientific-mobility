@@ -1,4 +1,4 @@
-# Tracing scientific mobility with folium map
+# Tracing scientific mobility with folium map (restored)
 
 Following script creates a geographic map of scientific mobility. It shows scientists going from host institute to guest institute for a given year.
 
